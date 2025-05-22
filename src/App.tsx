@@ -13,7 +13,7 @@ function App() {
       <header className="relative z-10 py-4 px-6 md:px-12 lg:px-24 bg-black/90 text-white">
         <div className="flex items-center justify-between">
           <div className="flex items-center">
-            <img src="./assets/header-logo.png" alt="Garage61 Logo" className="h-8" />
+            <img src="/garage61-LP-devin/assets/header-logo.png" alt="Garage61 Logo" className="h-8" />
           </div>
           
           {/* Mobile menu button */}
@@ -52,7 +52,7 @@ function App() {
       <section className="relative h-[600px] flex items-center">
         <div className="absolute inset-0 bg-black/70 z-0">
           <img 
-            src="./assets/header-bg.png"
+            src="/garage61-LP-devin/assets/header-bg.png"
             alt="Racing car on track" 
             className="w-full h-full object-cover opacity-50 mix-blend-overlay"
           />
@@ -230,7 +230,7 @@ function App() {
           <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
             <div>
               <div className="mb-4">
-                <img src="./assets/footer_logo.png" alt="Garage61 Logo" className="h-8" />
+                <img src="/garage61-LP-devin/assets/footer_logo.png" alt="Garage61 Logo" className="h-8" />
               </div>
               <p className="text-gray-400">
                 Collaborative data for faster laps and better racing performance.
@@ -269,13 +269,13 @@ function App() {
             <p>© {new Date().getFullYear()} Garage61. All rights reserved.</p>
             <div className="flex space-x-4">
               <a href="https://discord.com" target="_blank" rel="noopener noreferrer" className="hover:opacity-80 transition-opacity">
-                <img src="./assets/image 130.png" alt="Discord" className="h-6" />
+                <img src="/garage61-LP-devin/assets/image 130.png" alt="Discord" className="h-6" />
               </a>
               <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="hover:opacity-80 transition-opacity">
-                <img src="./assets/image 131.png" alt="Twitter/X" className="h-6" />
+                <img src="/garage61-LP-devin/assets/image 131.png" alt="Twitter/X" className="h-6" />
               </a>
               <a href="mailto:contact@garage61.com" target="_blank" rel="noopener noreferrer" className="hover:opacity-80 transition-opacity">
-                <img src="./assets/image 132.png" alt="Email" className="h-6" />
+                <img src="/garage61-LP-devin/assets/image 132.png" alt="Email" className="h-6" />
               </a>
             </div>
           </div>
