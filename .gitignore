@@ -1,2 +1,2 @@
 node_modules/
-dist/
+# Allowing dist/ for GitHub Pages deployment
