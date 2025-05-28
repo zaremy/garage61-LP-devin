@@ -299,13 +299,13 @@ function App() {
             <p>© {new Date().getFullYear()} Garage61. All rights reserved.</p>
             <div className="flex space-x-4">
               <a href="https://discord.com" target="_blank" rel="noopener noreferrer" className="hover:opacity-80 transition-opacity">
-                <img src="/garage61-LP-devin/assets/image 130.png" alt="Discord" className="h-6" />
+                <img src={process.env.NODE_ENV === 'production' ? '/garage61-LP-devin/assets/image 130.png' : '/assets/image 130.png'} alt="Discord" className="h-6" />
               </a>
               <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="hover:opacity-80 transition-opacity">
-                <img src="/garage61-LP-devin/assets/image 131.png" alt="Twitter/X" className="h-6" />
+                <img src={process.env.NODE_ENV === 'production' ? '/garage61-LP-devin/assets/image 131.png' : '/assets/image 131.png'} alt="Twitter/X" className="h-6" />
               </a>
               <a href="mailto:contact@garage61.com" target="_blank" rel="noopener noreferrer" className="hover:opacity-80 transition-opacity">
-                <img src="/garage61-LP-devin/assets/image 132.png" alt="Email" className="h-6" />
+                <img src={process.env.NODE_ENV === 'production' ? '/garage61-LP-devin/assets/image 132.png' : '/assets/image 132.png'} alt="Email" className="h-6" />
               </a>
             </div>
           </div>
