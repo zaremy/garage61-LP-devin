@@ -1,8 +1,10 @@
 import { useState } from 'react'
+import { Link } from 'react-router-dom'
 import './App.css'
 import { Menu, X } from 'lucide-react'
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from './components/ui/accordion'
 import { Button } from './components/ui/button'
+import { Card, CardContent } from './components/ui/card'
 
 function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -26,9 +28,9 @@ function App() {
           
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
-            <a href="#features" className="hover:text-[#0d6efd] transition-colors">Features</a>
-            <a href="#teams" className="hover:text-[#0d6efd] transition-colors">Teams</a>
-            <a href="#faq" className="hover:text-[#0d6efd] transition-colors">FAQ</a>
+            <Link to="/pricing" className="hover:text-[#0d6efd] transition-colors">Pricing</Link>
+            <Link to="/services" className="hover:text-[#0d6efd] transition-colors">Services</Link>
+            <Link to="/support" className="hover:text-[#0d6efd] transition-colors">Support</Link>
             <Button className="bg-[#0d6efd] hover:bg-[#0b5ed7] text-white font-medium rounded-md">
               Get Started
             </Button>
@@ -38,9 +40,9 @@ function App() {
         {/* Mobile Navigation */}
         {isMenuOpen && (
           <nav className="md:hidden pt-4 pb-2 flex flex-col space-y-4">
-            <a href="#features" className="hover:text-[#0d6efd] transition-colors">Features</a>
-            <a href="#teams" className="hover:text-[#0d6efd] transition-colors">Teams</a>
-            <a href="#faq" className="hover:text-[#0d6efd] transition-colors">FAQ</a>
+            <Link to="/pricing" className="hover:text-[#0d6efd] transition-colors">Pricing</Link>
+            <Link to="/services" className="hover:text-[#0d6efd] transition-colors">Services</Link>
+            <Link to="/support" className="hover:text-[#0d6efd] transition-colors">Support</Link>
             <Button className="bg-[#0d6efd] hover:bg-[#0b5ed7] text-white font-medium rounded-md w-full">
               Get Started
             </Button>
@@ -50,11 +52,11 @@ function App() {
 
       {/* Hero Section */}
       <section className="relative h-[600px] flex items-center">
-        <div className="absolute inset-0 bg-black/70 z-0">
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-black/30 to-black/70 z-0">
           <img 
             src="/garage61-LP-devin/assets/header-bg.png"
             alt="Racing car on track" 
-            className="w-full h-full object-cover opacity-50 mix-blend-overlay"
+            className="w-full h-full object-cover opacity-60 mix-blend-overlay"
           />
         </div>
         <div className="relative z-1 container mx-auto px-6 md:px-12 lg:px-24">
@@ -119,33 +121,61 @@ function App() {
         </div>
       </section>
 
-      {/* Teams/Logos Section */}
+      {/* Statistics Section */}
       <section id="teams" className="py-16 px-6 md:px-12 lg:px-24 bg-gray-50">
         <div className="container mx-auto">
           <h2 className="text-2xl md:text-3xl font-bold text-center mb-12">
             Trusted by top racing teams
           </h2>
           
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 items-center justify-items-center">
-            {/* Use actual logos from the Figma design or placeholder text */}
-            <div className="h-12 w-24 flex items-center justify-center">
-              <span className="text-lg font-bold text-gray-800">McLaren</span>
-            </div>
-            <div className="h-12 w-24 flex items-center justify-center">
-              <span className="text-lg font-bold text-gray-800">Ferrari</span>
-            </div>
-            <div className="h-12 w-24 flex items-center justify-center">
-              <span className="text-lg font-bold text-gray-800">Red Bull</span>
-            </div>
-            <div className="h-12 w-24 flex items-center justify-center">
-              <span className="text-lg font-bold text-gray-800">Aston Martin</span>
-            </div>
-            <div className="h-12 w-24 flex items-center justify-center">
-              <span className="text-lg font-bold text-gray-800">Mercedes</span>
-            </div>
-            <div className="h-12 w-24 flex items-center justify-center">
-              <span className="text-lg font-bold text-gray-800">Alpine</span>
-            </div>
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 items-center justify-items-center">
+            {/* WEC Drivers */}
+            <Card className="w-full hover:shadow-md transition-shadow text-center">
+              <CardContent className="p-6 flex flex-col items-center">
+                <p className="text-3xl font-bold text-[#0d6efd] mb-2">7</p>
+                <p className="text-sm text-gray-600">WEC drivers</p>
+              </CardContent>
+            </Card>
+            
+            {/* IMSA Drivers */}
+            <Card className="w-full hover:shadow-md transition-shadow text-center">
+              <CardContent className="p-6 flex flex-col items-center">
+                <p className="text-3xl font-bold text-[#0d6efd] mb-2">50+</p>
+                <p className="text-sm text-gray-600">IMSA drivers</p>
+              </CardContent>
+            </Card>
+            
+            {/* Indy Drivers */}
+            <Card className="w-full hover:shadow-md transition-shadow text-center">
+              <CardContent className="p-6 flex flex-col items-center">
+                <p className="text-3xl font-bold text-[#0d6efd] mb-2">25+</p>
+                <p className="text-sm text-gray-600">Indy drivers</p>
+              </CardContent>
+            </Card>
+            
+            {/* Nascar Drivers */}
+            <Card className="w-full hover:shadow-md transition-shadow text-center">
+              <CardContent className="p-6 flex flex-col items-center">
+                <p className="text-3xl font-bold text-[#0d6efd] mb-2">10+</p>
+                <p className="text-sm text-gray-600">Nascar drivers</p>
+              </CardContent>
+            </Card>
+            
+            {/* Rally Drivers */}
+            <Card className="w-full hover:shadow-md transition-shadow text-center">
+              <CardContent className="p-6 flex flex-col items-center">
+                <p className="text-3xl font-bold text-[#0d6efd] mb-2">10+</p>
+                <p className="text-sm text-gray-600">Rally drivers</p>
+              </CardContent>
+            </Card>
+            
+            {/* Formula Drivers */}
+            <Card className="w-full hover:shadow-md transition-shadow text-center">
+              <CardContent className="p-6 flex flex-col items-center">
+                <p className="text-3xl font-bold text-[#0d6efd] mb-2">50+</p>
+                <p className="text-sm text-gray-600">Formula drivers</p>
+              </CardContent>
+            </Card>
           </div>
         </div>
       </section>
